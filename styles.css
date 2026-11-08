@@ -29,6 +29,11 @@ img {
 }
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   padding: 1rem;
   background-color: #ffffff;
   border-bottom: 1px solid #cccccc;
@@ -39,9 +44,14 @@ header img {
 }
 
 nav a {
-  margin-left: 1.5rem;
   color: var(--color-text);
   text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
 }
 
 main {
@@ -78,4 +88,20 @@ textarea {
 .active {
   color: var(--color-accent);
   border-bottom: 2px solid var(--color-accent);
+}
+
+.exhibit-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
 }
