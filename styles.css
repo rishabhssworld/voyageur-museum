@@ -95,13 +95,48 @@ textarea {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
 .showcase {
   display: grid;
-  grid-template-columns: 2fr 1fr;
   gap: 2rem;
-  align-items: start;
+}
+
+table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cccccc;
+  text-align: left;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+  .exhibit-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header,
+  main,
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .showcase {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
 }
